@@ -30,8 +30,8 @@ when "mac_os_x"
   # Supported by brew
 when "redhat", "centos", "scientific", "fedora", "arch", "amazon"
   include_recipe 'yum::default'
-  
-  if node['platform_version'].to_i == 6
+
+  if node['platform_version'].to_i == 7
     yum_repository 'mosquitto' do
       description 'Mosquitto Repository'
       baseurl     'http://download.opensuse.org/repositories/home:/oojah:/mqtt/CentOS_CentOS-6/'
